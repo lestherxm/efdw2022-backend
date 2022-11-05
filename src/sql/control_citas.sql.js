@@ -40,7 +40,7 @@ const selectCitasFalse =
 // UPDATE ONE
 const uptadeWhere = 
 `UPDATE ${table}
-SET id_paciente = $2, id_doctor = $2, fecha_cita = $3, estatus_cita = $4
+SET id_paciente = $1, id_doctor = $2, fecha_cita = $3, estatus_cita = $4
 WHERE ${pk} = $5 RETURNING *`; // RETURNING * Devuelve los datos @actualizados.
 
 // DELETE ONE
