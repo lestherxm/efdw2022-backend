@@ -31,7 +31,8 @@ const create = async (req, res, next) => {
 
 const readAllWhere = async (req, res, next) => {
     try {
-        const { prop } = req.body;
+        // const title = req.query.title;
+        const { prop } = req.query;
         const result = await db.query(selectAllWhere, [prop]);
         if (result.rows.length === 0) {
             return res.status(404).json({
