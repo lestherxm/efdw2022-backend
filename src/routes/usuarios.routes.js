@@ -12,7 +12,7 @@ const pk = `id_usuario`;
 router.post(`${ep}`, usuarios.create);
 
 //Read All Where
-router.get(`${ep}`, usuarios.readAllWhere);
+router.get(`${ep}`, usuarios.readAll);
 
 //Read One
 router.get(`${ep}/:${pk}`, usuarios.readOne);

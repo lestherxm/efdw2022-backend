@@ -2,7 +2,7 @@ const db = require("../../database/pool"); //credenciales bajo las cuales se rea
 //sentencias sql en forma de strings para no hacer tediosa la lectura del codigo (mensajes tambien se incluyen)
 const {
     insertInto,
-    selectAllWhere,
+    selectAll,
     selectWhere,
     uptadeWhere,
     deleteWhere,
@@ -29,11 +29,9 @@ const create = async (req, res, next) => {
     }
 };
 
-const readAllWhere = async (req, res, next) => {
+const readAll = async (req, res, next) => {
     try {
-        // const title = req.query.title;
-        const { prop } = req.query;
-        const result = await db.query(selectAllWhere, [prop]);
+        const result = await db.query(selectAll);
         if (result.rows.length === 0) {
             return res.status(404).json({
                 message: msgNotFound("obtener", "prop", prop),
@@ -104,7 +102,7 @@ const deleteOne = async (req, res, next) => {
 
 module.exports = {
     create,
-    readAllWhere,
+    readAll,
     readOne,
     updateOne,
     deleteOne

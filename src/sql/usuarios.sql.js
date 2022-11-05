@@ -20,6 +20,10 @@ VALUES ($1, $2, $3, $4) RETURNING *`; // RETURNING * Devuelve los datos @registr
 const selectAllWhere = 
 `SELECT * FROM ${table} WHERE ${prop} LIKE CONCAT('%', CAST ($1 AS VARCHAR(250)) ,'%')`;
 
+// READ ALL
+const selectAll = 
+`SELECT * FROM ${table}`;
+
 // READ ONE
 const selectWhere = 
 `SELECT * FROM ${table} WHERE ${pk} = $1`;
@@ -46,7 +50,7 @@ const msgNotFound = (operacion, propiedad, valor)=>{
 // TODO > Exportar consultas y metodos de devolucion de mensajes
 module.exports = {
     insertInto,
-    selectAllWhere,
+    selectAll,
     selectWhere,
     uptadeWhere,
     deleteWhere,
