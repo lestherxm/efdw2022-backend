@@ -12,7 +12,7 @@ docker-compose up
 npm start
 ```
 
-###### If u wanna check the data directly in the PostgreSQL DB you can open a terminal on `docker desktop` and enter with the following credentials
+###### `-` If u wanna check the data directly in the PostgreSQL DB you can open a terminal on `docker desktop` and enter with the following credentials
 ```
 psql -U root -d efdw2022_backend -h localhost
 ```

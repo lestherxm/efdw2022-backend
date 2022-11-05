@@ -6,11 +6,9 @@ const pool = new Pool({
     password: db.password,
     host: db.host,
     port: db.port,
-    database: db.database
+    database: db.database,
+    ssl: {
+        rejectUnauthorized: false
+    }
 });
 module.exports = pool;
-
-//? será necesario agregarlo al pool object cuando se haga deploy a heroku :D
-    /*ssl: {
-        rejectUnauthorized: false
-    }*/
