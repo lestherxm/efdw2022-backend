@@ -17,7 +17,7 @@ npm start
 psql -U root -d efdw2022_backend -h localhost
 ```
 
-###### `-` You can also use the endpoint deployed project by using this [URL][https://efdw2022-backend.herokuapp.com/], the credentials are:
+###### `-` You can also use the endpoint deployed project on Heroku by using this [URL](https://efdw2022-backend.herokuapp.com/usuarios), the credentials if u wanna be into a terminal, are:
 ```
 psql -U cqqvfxwlckurku -d d4v06dr02eqtda -h ec2-35-170-21-76.compute-1.amazonaws.com
 
