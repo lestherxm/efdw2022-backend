@@ -31,7 +31,7 @@ const selectWhere =
 const uptadeWhere = 
 `UPDATE ${table}
 SET nombre_completo = $1, edad = $2, fecha_nacimiento = $3, genero = $4, estado_civil = $5, correo = $6, telefono = $7
-WHERE ${pk} = $5 RETURNING *`; // RETURNING * Devuelve los datos @actualizados.
+WHERE ${pk} = $8 RETURNING *`; // RETURNING * Devuelve los datos @actualizados.
 
 // DELETE ONE
 const deleteWhere = 
