@@ -8,7 +8,8 @@ CREATE TABLE usuarios(
     biografia TEXT NOT NULL,
     edad SMALLINT NOT NULL DEFAULT 0,
     genero CHAR(1) NOT NULL,
-    CONSTRAINT chk_genero CHECK (genero IN ('M', 'F'))
+    CONSTRAINT chk_genero_usuario CHECK (genero IN ('M', 'F')),
+    CONSTRAINT chk_edad_usuario CHECK (edad >= 0)
 );
 
 -- DATOS DE PRUEBA
