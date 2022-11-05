@@ -13,6 +13,8 @@ CREATE TABLE usuarios(
 
 -- DATOS DE PRUEBA
 INSERT INTO usuarios(usuario, biografia, edad, genero) VALUES
-('lestherxm', 'This is the beggining',21,'M');
+('lestherxm', 'This is the beggining',21,'M'),
+('jorgedv', 'This is the beggining',21,'M'),
+('arnold', 'This is the beggining',21,'M');
 
 --* FINAL - USUARIOS
