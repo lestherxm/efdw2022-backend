@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+
+  postgres:
+    image: postgres 
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - DATABASE_HOST=127.0.0.1
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=efdw2022_backend
+    volumes: #ejectua el archivo.sql al ejecutar `docker-compose up`
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
