@@ -116,7 +116,8 @@ const updateOne = async (req, res, next) => {
             id_paciente,
             id_doctor,
             fecha_cita,
-            estatus_cita
+            estatus_cita,
+            id_cita
         ]);
         if (result.rows.length === 0) {
             return res.status(404).json({
