@@ -3,22 +3,21 @@
 */
 
 // TODO > Nombre de la tabla
-const table = 'usuarios'; 
+const table = 'pacientes'; 
 
 // TODO > Llave primaria
-const pk = 'id_usuario';  
+const pk = 'id_paciente';  
 
 // TODO > campo tomado como criterio de busqueda
-const prop = 'usuario';   
+const prop = 'nombre_completo';   
 
 // CREATE
 const insertInto = 
-`INSERT INTO ${table} (usuario, biografia, edad, genero)
-VALUES ($1, $2, $3, $4) RETURNING *`; // RETURNING * Devuelve los datos @registrados.
+`INSERT INTO ${table}(nombre_completo, edad, fecha_nacimiento, genero, estado_civil, correo, telefono) 
+VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *`; // RETURNING * Devuelve los datos @registrados.
 
-// READ ALL WHERE
-const selectAllWhere = 
-`SELECT * FROM ${table} WHERE ${prop} LIKE CONCAT('%', CAST ($1 AS VARCHAR(250)) ,'%')`;
+const search = 
+`SELECT * FROM ${table} WHERE ${prop} LIKE CONCAT('%', CAST ($1 AS VARCHAR(250)) ,'%')`; // Busqueda por nombre_completo
 
 // READ ALL
 const selectAll = 
@@ -31,7 +30,7 @@ const selectWhere =
 // UPDATE ONE
 const uptadeWhere = 
 `UPDATE ${table}
-SET usuario = $1, biografia = $2, edad = $3, genero = $4
+SET nombre_completo = $1, edad = $2, fecha_nacimiento = $3, genero = $4, estado_civil = $5, correo = $6, telefono = $7
 WHERE ${pk} = $5 RETURNING *`; // RETURNING * Devuelve los datos @actualizados.
 
 // DELETE ONE
@@ -50,6 +49,7 @@ const msgNotFound = (operacion, propiedad, valor)=>{
 // TODO > Exportar consultas y metodos de devolucion de mensajes
 module.exports = {
     insertInto,
+    search,
     selectAll,
     selectWhere,
     uptadeWhere,
