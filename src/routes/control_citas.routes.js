@@ -30,10 +30,10 @@ router.get(`${ep}/doctor/:id_doctor`, control_citas.readOneDoctor);
 router.get(`${ep}/paciente/:id_paciente`, control_citas.readOnePaciente);
 
 //Update One Cita
-router.put(`${ep}/:${pk}`, control_citas.updateOne);
+router.put(`${ep}/cita/:${pk}`, control_citas.updateOne);
 
 //Delete One
-router.delete(`${ep}/:${pk}`, control_citas.deleteOne);
+router.delete(`${ep}/cita/:${pk}`, control_citas.deleteOne);
 
 // Exporta los enpoints
 module.exports = router;
