@@ -16,10 +16,6 @@ CREATE TABLE pacientes(
     CONSTRAINT chk_edad_paciente CHECK (edad >= 0)
 );
 
--- DATOS DE PRUEBA
--- INSERT INTO pacientes(nombre_completo, edad, fecha_nacimiento, genero, estado_civil, correo, telefono) VALUES
--- ();
-
 --* FINAL - PACIENTE
 
 
