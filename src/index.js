@@ -7,6 +7,7 @@ const port = process.env.PORT || 3000;
 // TODO > @requerir rutas aqui
 const pacientes = require('./routes/pacientes.routes');
 const doctores = require('./routes/doctores.routes');
+const control_citas = require('./routes/control_citas.routes');
 
 //* Complementan funcionalidad de express
 app.use(cors()); // comunicar ambos servers de manera simple (front y back)
@@ -16,7 +17,7 @@ app.use(express.json()); // express server no entiende JSON nativamente, es nece
 // TODO > @usar rutas aqui
 app.use(pacientes);
 app.use(doctores);
-
+app.use(control_citas);
 
 //? DUMMY API
 app.get("/", (req, res) => {

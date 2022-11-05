@@ -2,7 +2,6 @@ const db = require("../../database/pool"); //credenciales bajo las cuales se rea
 //sentencias sql en forma de strings para no hacer tediosa la lectura del codigo (mensajes tambien se incluyen)
 const {
     insertInto,
-    search,
     selectAll,
     selectWhere,
     uptadeWhere,
@@ -39,11 +38,6 @@ const create = async (req, res, next) => {
 const readAll = async (req, res, next) => {
     try {
         const result = await db.query(selectAll);
-        if (result.rows.length === 0) {
-            return res.status(404).json({
-                message: msgNotFound("obtener", "prop", prop),
-            });
-        } //else
         res.json(result.rows);
     } catch (error) {
         next(error);
