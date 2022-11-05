@@ -1,5 +1,8 @@
-# EFDW2022 - Backend
-## Author: Lesther Xitumul Manuel
+# Backend  > [Ver el backend funcionando en Heroku](https://efdw2022-backend.herokuapp.com/)
+
+# Backend  > [Ver el funcionamiento del backend](https://drive.google.com/file/d/1Nu-fxEKffnzMMo-HehGBYV4TpVFB4iHk/view?usp=sharing) 
+
+# Frontend > [Ver el Prototipo hecho en Oracle Apex](https://drive.google.com/file/d/1Xbog4ad6gTFK0Lg8Z4xEXOg880P_bpzk/view?usp=sharing)
 
 #### How can u try this API in your local host?
 
