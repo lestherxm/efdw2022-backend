@@ -2,6 +2,10 @@
 
 # Backend  > [Ver el funcionamiento del backend](https://drive.google.com/file/d/1Nu-fxEKffnzMMo-HehGBYV4TpVFB4iHk/view?usp=sharing) 
 
+```
+Nota: Ing. Si ve esto, la API sí la terminé completa durante las horas del exámen, lo único que hice fuera de ese tiempo fue lo de `Oracle Apex` porque no me dió tiempo u.u
+```
+
 # Frontend > [Ver el Prototipo hecho en Oracle Apex](https://drive.google.com/file/d/1Xbog4ad6gTFK0Lg8Z4xEXOg880P_bpzk/view?usp=sharing)
 
 #### How can u try this API in your local host?
